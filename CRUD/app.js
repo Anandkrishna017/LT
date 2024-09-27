@@ -12,6 +12,10 @@ app.use(express.json())
 //     res.send("Hello world!!!");
 //  })
 
+
+//This is for pull demo
+
+
 app.use("/api",userRoute);
 app.use("/api",productRoute);
 
