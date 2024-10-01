@@ -1,3 +1,4 @@
+const createToken = require('../helper/token');
 const {User } = require('../models');
 
 const addUser= async(req,res)=>{
@@ -7,7 +8,8 @@ const addUser= async(req,res)=>{
     if(!user){
         return res.json({message:"No User created"})
     }
-     res.json(user);
+    const token = createToken(user);
+     res.json({user,token});
     } catch (error) {
        console.log(error) 
      res.status(500).json(error)

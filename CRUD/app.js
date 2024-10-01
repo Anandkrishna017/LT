@@ -3,7 +3,8 @@ const { sequelize,User,Product } = require('./models');
 const { include } = require('underscore');
 const { message } = require('statuses');
 const userRoute=require('./route/userRoute.js')
-const productRoute=require('./route/productRoutes.js')
+const productRoute=require('./route/productRoutes.js');
+const verifyToken = require('./middleware/authMiddleware.js');
 
 const app=express();
 app.use(express.json())
@@ -18,7 +19,7 @@ app.use(express.json())
 
 
 app.use("/api",userRoute);
-app.use("/api",productRoute);
+app.use("/api",verifyToken,productRoute);
 
 // app.post("/users",async(req,res)=>{
 //     const {name ,email}=req.body;
