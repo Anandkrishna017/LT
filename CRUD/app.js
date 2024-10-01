@@ -5,6 +5,7 @@ const { message } = require('statuses');
 const userRoute=require('./route/userRoute.js')
 const productRoute=require('./route/productRoutes.js');
 const verifyToken = require('./middleware/authMiddleware.js');
+require('dotenv').config();
 
 const app=express();
 app.use(express.json())

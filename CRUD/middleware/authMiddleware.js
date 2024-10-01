@@ -1,7 +1,7 @@
 const jwt = require('jsonwebtoken');
 const { message } = require('statuses');
 
-const secretKey="key"
+const secretKey=process.env.JWT_SECRET || "key"
 
 const verifyToken=(req,res,next)=>{
    const token = req.header('Authorization');
