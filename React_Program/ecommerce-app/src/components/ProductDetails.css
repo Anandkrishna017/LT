@@ -2,7 +2,10 @@
     display: flex;
     justify-content: center;
     align-items: ccenter;
-     margin-top: 50px;
+    margin-top: 50px;
+    height: 80vb;
+    bottom: 0;
+    left: 0;
 
 }
 .product-image{
@@ -43,7 +46,7 @@
     cursor: pointer;
 
 }
-.go-back-home-button{
+.go-back-home{
     display: inline-block;
     margin-top: 20px;
     padding: 10px 20px;
